@@ -1,0 +1,5 @@
+---
+- name: creating a file
+  hosts: localhost
+  tasks:
+    - command: touch test.txt

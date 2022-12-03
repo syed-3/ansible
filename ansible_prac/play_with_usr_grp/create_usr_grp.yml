@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: creating group
+      group:
+        name: testgroup
+        state: present
+        gid: 1999
+
+    - name: creating temporary_users
+      user:
+        name: testuser
+        state: present
+        uid: 1999
+        group: testgroup

@@ -1,0 +1,8 @@
+---
+- name: creating a file
+  hosts: localhost
+  tasks:
+    - name: create dir
+      file:
+        path: "../ansible/result1"
+        state: directory

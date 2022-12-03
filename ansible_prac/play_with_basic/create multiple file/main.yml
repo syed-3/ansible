@@ -1,0 +1,12 @@
+---
+  - name: creating a file
+    hosts: localhost
+    tasks:
+    - name: creating multible files
+      file:
+        path: "../ansible/result/{{item}}"
+        state: touch
+      with_items:
+        - test1.txt
+        - test2.txt
+        - test3.txt

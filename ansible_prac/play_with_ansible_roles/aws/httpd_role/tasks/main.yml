@@ -1,0 +1,14 @@
+---
+# tasks file for httpd
+- name: installing httpd
+  yum:
+    name: httpd
+    state: latest
+
+- name: start the service
+  service:
+    name: httpd
+    state: stopped
+
+- name: Check Status
+  command: systemctl status httpd

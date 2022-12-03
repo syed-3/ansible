@@ -1,0 +1,12 @@
+---
+  - name: Nginx installation
+    hosts: webserver
+    become: yes
+    tasks:
+      - name: Nginx server installing  
+        command: amazon-linux-extras install nginx1=latest -y
+
+      - name: start Nginx service
+        service: 
+          name: nginx 
+          state: started

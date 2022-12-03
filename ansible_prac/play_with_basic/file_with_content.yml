@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - name: creating file with content
+      copy:
+        dest: "../result1/content.txt"
+        content: |
+          hello world
+          syed here

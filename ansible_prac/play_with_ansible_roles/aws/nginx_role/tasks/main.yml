@@ -1,0 +1,16 @@
+---
+# tasks file for nginx
+- name: Nginx server installing  
+  command: amazon-linux-extras install nginx1=latest -y
+
+- name: Start the service
+  service:
+    name: nginx
+    state: stopped
+
+- name: Check Status
+  command: systemctl status nginx
+    
+- name: Version Check
+  command: nginx -v  
+          
